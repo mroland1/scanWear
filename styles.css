@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #111;
+    font-family: 'Syne', sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid white;
+    background-color: #333;
+    font-weight: bold;
+}
+
+#navbar a {
+    padding: 5px;
+    transition: font-weight .5s linear;
+}
+
+#navbar ul{
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+}
+
+#navbar ul li {
+    margin: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+#navbar ul li:last-child {
+    font-size: 2rem;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+#intro {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#intro h1 {
+    font-size: 2rem;
+    padding: 5px
+}
+
+h2 {
+    font-size: 4.5rem;
+    padding: 5px
+}
+
+#popularPicks {
+    text-align: center;
+}
+
+#popularPicks>div {
+    border-top: 2px solid white;
+
+    border-bottom: 2px solid white;
+    padding: 50px 0
+}
+
+#picksGallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.picks img {
+    width: 250px;
+    border-radius: 10%;
+    padding: 10px 0;
+}
+
+.desc, .price {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 5px 0
+}
+
+.price {
+    font-weight: bold;
+}
+
+.freeShipping {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 20%;
+    padding: 5rem 0;
+}
+
+.freeShipping p {
+    width: 50%;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+#limited>div, #aboutusFirst, #aboutusSecond {
+    border-bottom: 2px solid white
+}
+
+#aboutus h2 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#aboutusSecond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#aboutusSecond img {
+    height: 420px
+}
+
+#aboutusSecond div:last-child {
+    width: 25%;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-align: right;
+    font-style: justify;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.container div:first-child {
+    font-size: 2rem;
+    width: 33%;
+    text-align: center;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.container div:nth-child(2) {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div:last-child {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem
+}
+
+.container div:nth-child(2) p, .container div:last-child p {
+    width: 50%;
+    text-align: justify;
+}
+
+#limited img, #intro img {
+    height: 800px;
+    margin: 0;
+}
+
+#limited div:last-child {
+    text-align: center;
+}
+
+.active, #navbar a:hover {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+    #limited img, #intro img {
+        width: 100%;
+        height: 100%;
+    }
+    .picks img {
+        width: 200px
+    }
+    #aboutusSecond img {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .freeShipping {
+        flex-direction: column;
+        text-align: justify;
+    }
+    #picksGallery {
+        flex-direction: column;
+    }
+    .picks img {
+        width: 350px;
+    }
+    .freeShipping h2, #aboutus h2, #popularPicks h2, #intro h2 {
+        font-size: 3rem
+    }
+    #aboutusSecond {
+        flex-direction: column;
+        margin-top: 20px
+    }
+    #aboutusSecond div:last-child {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px
+    }
+    #aboutus img {
+        border-radius: 10px
+    }
+    #navbar ul li {
+        font-size: 1rem;
+    }
+    #navbar ul li:last-child {
+        font-size: 1.5rem
+    }
+    .freeShipping p {
+        width: 100%;
+    }
+    #intro {
+        margin-top: 10px
+    }
+    #aboutusSecond p {
+        width: 100%;
+    }
+        #intro h1 {
+        margin-top: 3rem
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem
+    }
+
+    .container div:nth-child(2), .container div:last-child {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .container div:nth-child(2) p, .container div:last-child p, .container div p{
+        text-align: center;
+        font-weight: bold;
+    }
+    #intro h1 {
+        margin-top: 3rem
+    }
+}
+
+/*  productsPage.html   */
+
